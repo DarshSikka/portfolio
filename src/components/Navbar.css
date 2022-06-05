@@ -1,0 +1,62 @@
+
+.rl {
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+@media (min-width: 1200px) {
+  .pag {
+    display: flex;
+    justify-content: space-around;
+    width: 600px;
+  }
+}
+@media (max-width: 1200px) {
+  .pag {
+    display: flex;
+    flex-direction: column;
+    background: grey;
+  }
+}
+.menuIcon {
+  font-size: 50px;
+}
+small {
+  font-size: 12px;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background:  #212529;
+  color: white;
+}
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+#nav {
+  padding: 30px;
+}
+.me {
+  font-size: 30px;
+}
+.phoneMenu {
+  width: 200px;
+  font-size: 50px;
+}
+.light nav{
+  color:  rgb(29, 4, 109);
+  background: white;
+}
+.light .rl{
+  color: rgb(29, 4, 109);
+}
