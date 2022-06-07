@@ -14,6 +14,9 @@
 export default {
   name: "Home",
   components: {},
+  mounted(){
+    document.title="Home - Darsh Sikka - Full Stack Web Developer"
+  }
 };
 </script>
 <style>

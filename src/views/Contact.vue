@@ -94,6 +94,9 @@ input, textarea{
 <script>
 
 export default {
+  mounted(){
+    document.title="Contact - Darsh Sikka - Full Stack Web Developer"
+  },
   data(){
     return {
       subject: "",

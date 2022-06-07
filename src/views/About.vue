@@ -8,7 +8,11 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  mounted(){
+    document.title="About - Darsh Sikka - Full Stack Web Developer"
+  },
+};
 </script>
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');

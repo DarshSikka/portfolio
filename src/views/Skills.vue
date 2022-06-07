@@ -17,6 +17,9 @@ export default {
       e.target.value = sk;
     }
   },
+  mounted(){
+    document.title="Skills - Darsh Sikka - Full Stack Web Developer"
+  },
   data() {
     return {
       skills: [

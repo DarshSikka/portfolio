@@ -69,6 +69,7 @@ export default {
     },
   },
   mounted(){
+    document.title="Projects - Darsh Sikka - Full Stack Web Developer"
     setInterval(()=>{
       if(this.no<this.projects.length-1){
       this.changeProject({target: {value: String((Number(this.no)+1))} } )
