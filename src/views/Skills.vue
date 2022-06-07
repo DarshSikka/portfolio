@@ -98,6 +98,14 @@ export default {
 };
 </script>
 <style scoped>
+@keyframes fade-in{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1
+  }
+}
 .heading{
     font-size: 3em;
     font-family: 'Caveat', cursive;
@@ -111,6 +119,9 @@ export default {
 }
 .skills{
   margin-top: 2.5rem;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
 }
 .light{
   background: white;

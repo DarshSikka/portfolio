@@ -15,9 +15,20 @@
 </div>
 </template>
 <style scoped>
+@keyframes fade-in{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1
+  }
+}
 .contact{
   margin-top: 2.5rem;
   height: 100vh;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
 }
 .light{
   background: white;

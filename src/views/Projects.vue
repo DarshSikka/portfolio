@@ -1,7 +1,7 @@
 <template>
 <div  :class="['projects', $store.state.theme]">
 <h1 class="heading">Projects</h1>
-<div class="project">
+<div :class="['project']">
   <div class="btns">
     <form>
     <input name="pic" type="radio" value="0" v-model="no" @click="changeProject"/>
@@ -86,7 +86,14 @@ export default {
 </script>
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
-
+  @keyframes fade-in{
+    from{
+      transform: scale(0);  /*opacity: 0 */
+    }
+    to{
+      transform: scale(1);/* opacity: 1 */
+    }
+  }
   .projects{
     margin-top: 2.5rem;
     height: 100vh;
@@ -114,9 +121,11 @@ export default {
     width: 50%;
     margin: auto;
     padding: 2rem;
+    animation: fade-in 1s linear 0s 1 alternate;
   }
   .light .project{
     border: 2px solid #23282c;
+    
   }
   .dark{
     background: #23282c;
