@@ -8,12 +8,26 @@
   </div>
 </template>
 <script>
-import "./About.css";
 export default {};
 </script>
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
-
+@keyframes emerge{
+  from{
+    width: 0%;
+  }
+  to{
+    width: 80%;
+  }
+}
+@keyframes fade-in{
+  from{
+    opacity: 0
+  }
+  to{
+    opacity: 1
+  }
+}
 .about{
   margin-top: 2.5rem;
   width: 100%;
@@ -42,13 +56,18 @@ export default {};
   height: 60%;
   display: flex;
   align-items: center;
-
+  animation: emerge 2s linear 0s 1 alternate;
+  border-radius: 16px;
 }
 .about-text .text{
   color: white;
   padding: 2rem;
   border-radius: 4px;
   background: rgba(35, 40, 44, 0.6);
+
+}
+.text{
+    animation: fade-in 2s linear 0s 1 alternate;
 
 }
 @media(min-width: 700px){
@@ -67,5 +86,6 @@ a{
 .heading{
   font-family: 'Caveat', cursive;
   font-size: 3em;
+  color: rgb(29, 4, 109);
 }
 </style>

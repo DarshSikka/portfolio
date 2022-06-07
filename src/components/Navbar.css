@@ -4,36 +4,36 @@
   text-decoration: none;
   color: white;
 }
-@media (min-width: 1200px) {
+@media (min-width: 700px) {
   .pag {
     display: flex;
     justify-content: space-around;
     width: 600px;
   }
 }
-@media (max-width: 1200px) {
-  .pag {
-    display: flex;
-    flex-direction: column;
-    background: grey;
+@media(max-width: 700px){
+  .pag{
+    display: none;
   }
 }
 .menuIcon {
-  font-size: 50px;
+  font-size: 30px;
 }
 small {
   font-size: 12px;
 }
 nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   position: fixed;
   top: 0;
   width: 100%;
   background:  #212529;
   color: white;
+}
+.inside-nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -50,13 +50,19 @@ nav {
   font-size: 30px;
 }
 .phoneMenu {
-  width: 200px;
-  font-size: 50px;
+  display: flex;
+  flex-direction: column;
 }
-.light nav{
-  color:  rgb(29, 4, 109);
+.dark .phoneMenu{
+  background: #212529;
+}
+.light .phoneMenu{
   background: white;
 }
+.light .inside-nav{
+  color:  #212529;
+  background: white !important;
+}
 .light .rl{
-  color: rgb(29, 4, 109);
+  color: #212529;
 }

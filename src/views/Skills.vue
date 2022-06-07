@@ -1,101 +1,107 @@
 <template>
 <div :class="['skills', $store.state.theme]">
-  <h1>My Skills</h1>
+  <h1 class="heading">My Skills</h1>
   <div class="container">
-  <div v-for="skill in skills" class="skill-grp" :key="skill.title">
-    <h2>{{ skill.title }}</h2>
-    <div v-for="nam in skill.groups" :key="nam.name">
-      <h3>{{ nam.name }}</h3>
-      <h5>{{ nam.description }}</h5>
+    <div v-for="skill in skills" class="skill" :key="skill.name">
+      <h3>{{ skill.name }}</h3>
+      <input type="range" min="0" max="100" @change="fix($event, skill.percent)" :style="{'accent-color': `rgb(${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)})`}" :value="skill.percent"/>
+      <h4>{{skill.percent}}% experience</h4>
     </div>
-  </div>
   </div>
 </div>
 </template>
 <script>
 export default {
+  methods: {
+    fix(e, sk){
+      e.target.value = sk;
+    }
+  },
   data() {
     return {
       skills: [
-        {
-          title: "Frontend",
-          groups: [
             {
               name: "HTML",
+              percent: 99
             },
             {
               name: "CSS",
+              percent: 90
             },
             {
               name: "SASS",
+              percent: 90
             },
             {
-              name: "Vanilla Javascript",
+              name: "Javascript",
+              percent: 99
             },
             {
               name: "React.js",
+              percent: 99
             },
             {
               name: "Vue.js",
+              percent: 99
             },
             {
-              name: "Electron",            },
-          ],
-        },
-        {
-          title: "Backend",
-          groups: [
+              name: "Electron",
+              percent: 70
+              },
             {
-              name: "Node.js",            },
+              name: "Node.js",         
+              percent: 99   
+            },
             {
               name: "Express",
+              percent: 99
             },
             {
               name: "Python",
+              percent: 70
               
             },
             {
               name: "Flask",
+              percent:  90
               
             },
             {
               name: "Django",
-              
+              percent: 60
             },
-          ],
-        },
-        {
-          title: "Databases",
-          groups: [
             {
               name: "MongoDB",
+              percent: 99
              
             },
             {
-              name: "MySQL",
+              name: "MySQL db",
+              percent: 80
               
             },
             {
-              name: "SQLITE",
-            },
-          ],
-        },
-        {
-          title: "Stack",
-          groups: [
-            {
-              name: "MERN",
+              name: "SQLITE db",
+              percent: 90
             },
             {
-              name: "MEVN",            },
-          ],
-        },
-      ],
+              name: "MERN stack",
+              percent: 99
+            },
+            {
+              name: "MEVN stack",     
+              percent: 99       
+            },
+    ]
     };
   },
 };
 </script>
-<style>
+<style scoped>
+.heading{
+    font-size: 3em;
+    font-family: 'Caveat', cursive;
+  }
 .container{
   display: flex;
   justify-content: space-around;
@@ -105,7 +111,6 @@ export default {
 }
 .skills{
   margin-top: 2.5rem;
-  height: 100vh;
 }
 .light{
   background: white;
@@ -117,5 +122,10 @@ export default {
 }
 .dark h1{
   color: whitesmoke;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
 }
 </style>

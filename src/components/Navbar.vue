@@ -1,19 +1,17 @@
 <template>
-<div :class="$store.state.theme">
-  <nav>
-    <div class="me">
+<nav :class="$store.state.theme">
+    <div class="inside-nav">
+    <router-link to="/" class="me rl">
       Darsh Sikka
-    </div>
+    </router-link>
     <div class="pages">
       <div
         @click="phoneToggle()"
-        v-if="phone"
         class="menuIcon"
-        className="phoneMenu"
       >
         &equiv;
       </div>
-      <div v-if="showPages" class="pag">
+      <div class="pag">
         <router-link to="/" class="rl">
           <linked>Home</linked>
         </router-link>
@@ -39,17 +37,33 @@
       🌙
     </text>
     </button>
-  </nav>
+    </div>
+    <div class="phoneMenu" v-if="showPages">
+    <router-link to="/" @click="phoneToggle()" class="rl">
+          <linked>Home</linked>
+        </router-link>
+        <router-link @click="phoneToggle()" to="/about" class="rl">
+          <linked>About Me</linked>
+        </router-link>
+        <router-link @click="phoneToggle()" to="/projects" class="rl">
+          <linked>Projects</linked>
+        </router-link>
+        <router-link @click="phoneToggle()" to="/skills" class="rl">
+          Skills
+        </router-link>
+        <router-link @click="phoneToggle()" to="/contact" class="rl">
+          <linked>Contact <small>for your project</small></linked>
+        </router-link>
   </div>
+  </nav>
 </template>
 <script>
 import "./Navbar.css";
 export default {
   data() {
     return {
-      showPages: screen.width > 500,
-      phone: screen.width < 500,
-    };
+    showPages: false
+    }
   },
   methods: {
     phoneToggle() {
@@ -72,5 +86,10 @@ export default {
  border: none;
  font-size: 30px;
  cursor: pointer;
+}
+@media(min-width: 700px){
+  .menuIcon{
+    display: none;
+  }
 }
 </style>

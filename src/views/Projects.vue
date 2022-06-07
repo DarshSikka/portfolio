@@ -1,6 +1,6 @@
 <template>
 <div  :class="['projects', $store.state.theme]">
-<h1>Projects</h1>
+<h1 class="heading">Projects</h1>
 <div class="project">
   <div class="btns">
     <form>
@@ -85,6 +85,8 @@ export default {
 };
 </script>
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
   .projects{
     margin-top: 2.5rem;
     height: 100vh;
@@ -102,6 +104,10 @@ export default {
   .text{
     width: 100%;
     margin: auto;
+  }
+  .heading{
+    font-size: 3em;
+    font-family: 'Caveat', cursive;
   }
   .project{
     border: 2px solid white;
@@ -124,5 +130,10 @@ export default {
   }
   .dark a{
     color: white;
+  }
+  @media(max-width: 700px){
+    .project{
+      width: 80%;
+    }
   }
 </style>
