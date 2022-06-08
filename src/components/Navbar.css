@@ -24,9 +24,9 @@ small {
 }
 nav {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  width: 100%;
   position: fixed;
   top: 0;
-  width: 100%;
   background:  #212529;
   color: white;
 }
@@ -55,6 +55,7 @@ nav {
 }
 .dark .phoneMenu{
   background: #212529;
+  z-index: 9999;
 }
 .light .phoneMenu{
   background: white;

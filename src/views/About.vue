@@ -33,17 +33,16 @@ export default {
   }
 }
 .about{
-  margin-top: 2.5rem;
   width: 100%;
 }
 .light{
   background: white;
-  color: black;
+  color: #23282c;
   height: 100vh;
 }
 /*rgb(29, 4, 109);*/
 .dark{
-  background: #212529;
+  background: #23282c;
   color: white;
   height: 100vh;
 }

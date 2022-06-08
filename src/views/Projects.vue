@@ -96,7 +96,6 @@ export default {
     }
   }
   .projects{
-    margin-top: 2.5rem;
     height: 100vh;
   }
   .light{

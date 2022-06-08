@@ -24,7 +24,6 @@
   }
 }
 .contact{
-  margin-top: 2.5rem;
   height: 100vh;
   animation-name: fade-in;
   animation-duration: 1s;

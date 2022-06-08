@@ -121,7 +121,6 @@ export default {
   width: 20%;
 }
 .skills{
-  margin-top: 2.5rem;
   animation-name: fade-in;
   animation-duration: 1s;
   animation-iteration-count: 1;

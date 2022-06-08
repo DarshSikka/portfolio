@@ -1,4 +1,5 @@
 <template>
+
   <div :class="['home', $store.state.theme]">
     <div class="hero">
       <div class="hero-text">
@@ -35,9 +36,11 @@ export default {
 body{
   margin: 0
 }
+.home{
+margin-top: 2.5rem;
+}
 .hero{
   background-image: url('/me.jpeg');
-  margin-top: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,6 +79,6 @@ body{
 }
 }
 .dark .hero{
-  filter: grayscale(60%);
+  background-image: url('/me-dark.jpeg')
 }
 </style>
