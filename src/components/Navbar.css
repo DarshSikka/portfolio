@@ -8,7 +8,7 @@
   .pag {
     display: flex;
     justify-content: space-around;
-    width: 600px;
+    width: 700px;
   }
 }
 @media(max-width: 700px){
