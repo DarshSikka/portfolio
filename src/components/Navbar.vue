@@ -27,6 +27,9 @@
         <router-link to="/contact" class="rl">
           <linked>Contact <small>for your project</small></linked>
         </router-link>
+        <router-link to="/timepass" class="rl">
+          <linked>Timepass Game</linked>
+        </router-link>
       </div>
     </div>
     <button @click="ct()" class="theme-btn">

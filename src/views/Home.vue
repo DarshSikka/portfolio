@@ -47,7 +47,7 @@ margin-top: 2.5rem;
   height: 100vh;
   background-repeat: none;
   background-size: cover;
-  animation: grow 1s linear 0s 1 alternate;
+  animation: grow 0.5s ease-in-out 0s 1 alternate;
 }
 .hero-text{
   background: rgba(255, 255, 255, 0.4);

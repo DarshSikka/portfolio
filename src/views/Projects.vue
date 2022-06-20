@@ -120,6 +120,7 @@ export default {
     border: 2px solid white;
     width: 50%;
     margin: auto;
+    border-radius: 8px;
     padding: 2rem;
     animation: fade-in 1s linear 0s 1 alternate;
   }

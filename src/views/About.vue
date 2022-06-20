@@ -16,17 +16,9 @@ export default {
 </script>
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
-@keyframes emerge{
-  from{
-    width: 0%;
-  }
-  to{
-    width: 80%;
-  }
-}
 @keyframes fade-in{
   from{
-    opacity: 0
+    opacity: 0.1
   }
   to{
     opacity: 1
@@ -59,19 +51,15 @@ export default {
   height: 60%;
   display: flex;
   align-items: center;
-  animation: emerge 2s linear 0s 1 alternate;
   border-radius: 16px;
+  animation: fade-in 1s linear 0s 1 alternate;
+
 }
 .about-text .text{
   color: white;
   padding: 2rem;
   border-radius: 4px;
   background: rgba(35, 40, 44, 0.6);
-
-}
-.text{
-    animation: fade-in 2s linear 0s 1 alternate;
-
 }
 @media(min-width: 700px){
   .about-text .text{

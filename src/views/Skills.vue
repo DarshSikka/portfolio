@@ -3,9 +3,8 @@
   <h1 class="heading">My Skills</h1>
   <div class="container">
     <div v-for="skill in skills" class="skill" :key="skill.name">
-      <h3>{{ skill.name }}</h3>
-      <input type="range" min="0" max="100" @change="fix($event, skill.percent)" :style="{'accent-color': `rgb(${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)})`}" :value="skill.percent"/>
-      <h4>{{skill.percent}}% experience</h4>
+      <h2>{{ skill.name }}</h2>
+      <img width="100" :src="skill.img" />
     </div>
   </div>
 </div>
@@ -25,75 +24,75 @@ export default {
       skills: [
             {
               name: "HTML",
-              percent: 99
+              img: "/html5.webp"
             },
             {
               name: "CSS",
-              percent: 90
+              percent: 90,
+              img: "/css.png"
             },
             {
               name: "SASS",
-              percent: 90
+              img: "/scss.png"
             },
             {
               name: "Javascript",
-              percent: 99
+              img: "/js.png"
             },
             {
               name: "React.js",
-              percent: 99
+              img: "/react.svg"
             },
             {
               name: "Vue.js",
-              percent: 99
+              img: "/vue.png"
             },
             {
-              name: "Electron",
-              percent: 70
+              name: "Electron.js",
+              img: "/electron.png"
               },
             {
               name: "Node.js",         
-              percent: 99   
+              img: "/node.png"
             },
             {
               name: "Express",
-              percent: 99
+              img: "/express.png"
             },
             {
               name: "Python",
-              percent: 70
+              img: "/python.png"
               
             },
             {
               name: "Flask",
-              percent:  90
+              img: "/flask.png"
               
             },
             {
               name: "Django",
-              percent: 60
+              img: "/django.jpeg"
             },
             {
               name: "MongoDB",
-              percent: 99
-             
+              img: "/mongodb.webp"
             },
             {
               name: "MySQL db",
-              percent: 80
+              img: "/mysql.png"
               
             },
             {
               name: "SQLITE db",
-              percent: 90
+              img: "/sqlite.png"
             },
             {
               name: "MERN stack",
-              percent: 99
+              img: "/mern.png"
             },
             {
               name: "MEVN stack",     
-              percent: 99       
+              img: "/mevn.jpeg"
             },
     ]
     };
@@ -116,6 +115,7 @@ export default {
 .container{
   display: flex;
   justify-content: space-around;
+  padding-bottom: 1rem;
 }
 .skill-grp {
   width: 20%;
@@ -139,6 +139,11 @@ export default {
 
 .container{
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: 25% 25% 25%;
+}
+.skill{
+  border: 1px solid;
+  padding: 2rem;
+  margin-top: 1rem;
 }
 </style>

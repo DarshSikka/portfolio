@@ -31,6 +31,11 @@ const routes = [
     name: "Contact",
     component: () => import("../views/Contact"),
   },
+  {
+    path: "/timepass", 
+    name: "Timepass",
+    component: ()=>import('../views/TimePass.vue')
+  }
 ];
 
 const router = createRouter({
